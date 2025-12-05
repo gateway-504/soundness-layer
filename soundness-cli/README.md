@@ -103,13 +103,13 @@ Once you have your key and have won a game, you can submit your proof for verifi
 Use the `send` command with the following format:
 
 ```bash
-soundness-cli send --proof-file <proof-blob-id> --game <game-name> --key-name <your-key-name> --proving-system ligetron --payload '<json-payload>'
+soundness-cli send --proof-file "<proof-blob-id>" --game "<game-name>" --key-name "<your-key-name>" --proving-system "ligetron" --payload '<json-payload>'
 ```
 
 **Command Breakdown:**
 
 * `--proof-file` (`-p`): The unique Walrus Blob ID for your proof, which you receive after winning a game.
-* `--game` (`-g`): The name of the game you played (e.g., `8queens` or `tictactoe`).
+* `--game` (`-g`): The name of the game you played (e.g., `8queens` `knights_tour` or `tictactoe`).
 * `--key-name` (`-k`): The name you chose for your key in Step 2.
 * `--proving-system` (`-s`): The ZK proving system. For our current testnet games, this is `ligetron`.
 * `--payload` (`-d`): A JSON string with the specific inputs required to verify your Ligetron proof.
@@ -144,7 +144,7 @@ The public key will be displayed in the format:
 If you saved your mnemonic previously, you can import it to `key_store.json` by using following command:
 
 ```bash
-soundness-cli import-key --name <name> --mnemonic "<mnemonic>"
+soundness-cli import-key --name "<name>" --mnemonic "<mnemonic>"
 ```
 
 If it was successful you'll get:
